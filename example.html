@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Example of Tseslider</title>
+		<meta author="tsetsee_yugi">
+		<link href="tseslider.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<h1>Tseslider Examples</h1>
+		<div style="width: 500px;">
+			<div>
+				Step = 2, minVal = 0, maxVal = 50
+		  		<div id="myslider1" class="tseslider" data-step="1" data-min-value="0" data-max-value="50"></div>
+        		<div id="myslider1-val"></div>
+        	</div>
+        	<div>
+				Continuous, minVal = 10, defaultVal = 20
+		  		<div id="myslider2" class="tseslider" data-min-value="10" data-max-value="50" data-value="20"></div>
+        		<div id="myslider2-val"></div>
+        	</div>
+        	<div>
+				Change value <input id="myslider3-input" type="number"> <button id="myslider3-btn">GO</button>
+		  		<div id="myslider3" class="tseslider" data-min-value="10" data-max-value="50" data-value="20"></div>
+        		<div id="myslider3-val"></div>
+        	</div>
+    	</div>
+        <script src="jquery-1.11.1.min.js"></script>
+        <script src="jquery.transform2d.js"></script>
+        <script src="tseslider.js"></script>
+
+        <script>
+        	$("#myslider1").on("tseslider:ready tseslider:changed", function(){
+        		$("#myslider1-val").html($(this).tseslider("value"));
+        	});
+        	$("#myslider2").on("tseslider:ready tseslider:changed", function(){
+        		$("#myslider2-val").html($(this).tseslider("value").toFixed(2));
+        	});
+        	$("#myslider3").on("tseslider:ready tseslider:changed", function(){
+        		$("#myslider3-val").html($(this).tseslider("value").toFixed(2));
+        	});
+        	$("#myslider3-btn").click(function(){
+        		$("#myslider3").tseslider("value", $("#myslider3-input").val());
+        	});
+        </script>
+	</body>
+</html>
