@@ -1,6 +1,8 @@
 # tseslider
 Tseslider is a jQuery plugin of slider to support Mobile and Desktop
 
+[Example](https://cdn.rawgit.com/tsetsee/tseslider/master/example.html)
+
 ## arguments:
 * step - data-step
 * minValue - data-min-value
