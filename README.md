@@ -1,5 +1,5 @@
 # tseslider
-Tseslider is a jQuery plugin of slider
+Tseslider is a jQuery plugin of slider to support Mobile and Desktop
 
 ## arguments:
 * step - data-step
